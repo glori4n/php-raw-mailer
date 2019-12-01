@@ -1,4 +1,4 @@
-
+<!-- This small calculator was made by Glori4n(https://glori4n.com) as a small exercise for begginer students -->
 
 <?php
 
