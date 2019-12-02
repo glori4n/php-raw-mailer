@@ -2,13 +2,17 @@
 
 <?php
 
+// Detects if the form was submitted.
 if(isset($_POST['submit'])){
 
+    // Receives data from form and addslasehs to prevent SQL Injection.
     $name = addslashes($_POST["name"]);
     $email = addslashes($_POST["email"]);
     $msg = addslashes($_POST["msg"]);
     @$opt1 = addslashes($_POST["opt1"]);
 
+
+    // \r\n serves to skip a line in some ambients.
     $to = "YOUREMAIL@YOUREMAIL.COM";
     $subject = addslashes($_POST["subject"]);
     $body = "Name: ".$name."\r\n E-mail: ".$email."\r\n Message: ".$msg;
@@ -16,8 +20,10 @@ if(isset($_POST['submit'])){
                 "Reply-To: ".$email."\r\n".
                 "X-Mailer: PHP/".phpversion();
     
+    // Detects and sends the email, if everything was sent correctly.
     if(mail($to, $subject, $body, $header)){
 
+    // Detects and sends another email, if the option was marked and if everything was sent correctly.
         if(isset($opt1) && !empty($opt1) && mail($email, $subject, $body, $header)){
             echo "<h1>Message sent, and a copy was sent to the supplied E-mail.</h1>";
         }else{
