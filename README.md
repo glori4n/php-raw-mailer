@@ -1,4 +1,5 @@
-# php-login-system-crud
-This snippet was made by Glori4n(https://glori4n.com) as an exercise.
+# php-simple-mailer
 
-A raw simple mailer that is able to send emails.
+This snippet was made by Glori4n(https://glori4n.com).
+
+This snippet is able to send e-mails, it applies the concepts of PHP's mail() function. You will have to use an mailer service of your desire to be able to make this snippet work.
