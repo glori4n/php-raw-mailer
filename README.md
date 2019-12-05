@@ -1,4 +1,4 @@
-# php-simple-mailer
+# php-raw-mailer
 
 This snippet was made by Glori4n(https://glori4n.com).
 
